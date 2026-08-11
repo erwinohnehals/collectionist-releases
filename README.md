@@ -9,43 +9,40 @@ newer version exists.
 
 ## What is in a release
 
-| File                             | What it is                                                    |
-| -------------------------------- | ------------------------------------------------------------- |
-| `Collectionist_x.y.z_x64-setup.exe` | Windows installer (NSIS). This is the one to download.     |
-| `Collectionist_x.y.z_x64_en-US.msi` | Windows installer (MSI), for deployment tooling.           |
-| `*.nsis.zip` and `*.sig`         | The update package and its signature. The app downloads these itself; you never need them. |
-| `latest.json`                    | What the in-app updater reads.                                |
-| `collectionist-demo-library.zip` | Optional. A populated library to look around in — see below.  |
+| File                                | What it is                                                                                 |
+| ----------------------------------- | ------------------------------------------------------------------------------------------ |
+| `Collectionist_x.y.z_x64-setup.exe` | Windows installer. **This is the one to download.**                                        |
+| `Collectionist_x.y.z_x64_en-US.msi` | The same app as an MSI, for deployment tooling.                                            |
+| `*.sig`                             | Signatures the app checks before it installs an update. You never need to download these.  |
+| `latest.json`                       | What the in-app updater reads.                                                             |
 
 ## Installing
 
-Run the `.exe` and follow it. The installers are not code-signed yet, so
-Windows SmartScreen will say **"Windows protected your PC"** on a first
-install — click **More info**, then **Run anyway**. Updates applied from inside
-the app do not show this again; they are verified by the app's own signature
-instead.
+Run the `.exe` and follow it. That is the whole procedure — there is nothing
+else to download and nothing to unpack.
 
-## Starting with the demo library
+The installers are not code-signed yet, so Windows will say **"Windows
+protected your PC"** on a first install: click **More info**, then **Run
+anyway**. Updates applied from inside the app never show this again; they are
+verified by the app's own signature instead.
 
-`collectionist-demo-library.zip` is a ready-made collection — vintage
-motorcycles and vintage cars, with photographs, timelines, invoices, saved
-filters and a wish list — so there is something to look at before you have
-typed anything in.
+## The first launch
 
-Install it **before the first launch**: unpack the zip into
+The app asks one question and you answer it with a button:
 
-```
-%APPDATA%\com.collectionist.app
-```
+- **Start with an example collection.** Vintage motorcycles and cars, with
+  photographs, histories, invoices and saved filters, so there is something to
+  look at before you have typed anything in. It comes with the app.
+- **Start with an empty library**, and build your own from the beginning.
 
-so that a `library` folder appears there. That is it. Launch the app and it is
-already full.
+If you take the example and later want it gone, Settings empties it in one
+press: the collections, their photographs and their paperwork all go, and the
+item types stay, because those are what your own collections are built from.
+As long as you have not started a collection of your own, Settings will also
+put the example back.
 
-To go back to an empty app later, delete the collections from inside it — the
-photos and paperwork are cleaned up with them.
-
-The demo carries no licence key and no trial stamp, so your fifteen days still
-start on your own first launch.
+The example carries no licence key and no trial stamp, so your trial starts on
+your own first launch either way.
 
 ## Updates
 
